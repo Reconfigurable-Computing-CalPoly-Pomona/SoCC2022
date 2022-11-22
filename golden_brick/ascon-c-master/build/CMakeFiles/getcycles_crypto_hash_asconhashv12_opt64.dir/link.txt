@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/getcycles_crypto_hash_asconhashv12_opt64.dir/tests/getcycles.c.o -o getcycles_crypto_hash_asconhashv12_opt64  libcrypto_hash_asconhashv12_opt64.a 

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/getcycles_crypto_aead_ascon128av12_bi32.dir/tests/getcycles.c.o -o getcycles_crypto_aead_ascon128av12_bi32  libcrypto_aead_ascon128av12_bi32.a 

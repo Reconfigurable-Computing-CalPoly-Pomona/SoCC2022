@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../crypto_hash/asconhashv12/bi32/api.h
+
+/mnt/d/JI/HLS_HDL/ASCON/ascon/ascon-c-master/tests/crypto_aead.h
+
+/mnt/d/JI/HLS_HDL/ASCON/ascon/ascon-c-master/tests/crypto_hash.h
+
+/mnt/d/JI/HLS_HDL/ASCON/ascon/ascon-c-master/tests/getcycles.c
+stdio.h
+-
+stdlib.h
+-
+api.h
+/mnt/d/JI/HLS_HDL/ASCON/ascon/ascon-c-master/tests/api.h
+crypto_aead.h
+/mnt/d/JI/HLS_HDL/ASCON/ascon/ascon-c-master/tests/crypto_aead.h
+crypto_hash.h
+/mnt/d/JI/HLS_HDL/ASCON/ascon/ascon-c-master/tests/crypto_hash.h
+intrin.h
+-
+x86intrin.h
+-
+

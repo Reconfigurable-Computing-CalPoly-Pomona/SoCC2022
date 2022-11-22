@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/genkat_crypto_aead_ascon128v12_bi32.dir/tests/genkat_aead.c.o -o genkat_crypto_aead_ascon128v12_bi32  libcrypto_aead_ascon128v12_bi32.a 

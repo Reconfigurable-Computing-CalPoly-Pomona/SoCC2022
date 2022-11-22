@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcrypto_hash_asconhashv12_opt64.a CMakeFiles/crypto_hash_asconhashv12_opt64.dir/crypto_hash/asconhashv12/opt64/hash.c.o CMakeFiles/crypto_hash_asconhashv12_opt64.dir/crypto_hash/asconhashv12/opt64/permutations.c.o CMakeFiles/crypto_hash_asconhashv12_opt64.dir/crypto_hash/asconhashv12/opt64/printstate.c.o
+/usr/bin/ranlib libcrypto_hash_asconhashv12_opt64.a

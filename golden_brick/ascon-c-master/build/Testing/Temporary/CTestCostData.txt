@@ -1,0 +1,9 @@
+genkat_crypto_aead_ascon128v12_opt64 1 1.29489
+genkat_crypto_aead_ascon128v12_bi32 1 1.18703
+genkat_crypto_aead_ascon128av12_opt64 1 0.0780569
+genkat_crypto_aead_ascon128av12_bi32 1 0.0577862
+genkat_crypto_hash_asconhashav12_opt64 2 0.872094
+genkat_crypto_hash_asconhashav12_bi32 2 0.0598961
+genkat_crypto_hash_asconhashv12_opt64 1 2.60816
+genkat_crypto_hash_asconhashv12_bi32 1 0.120053
+---

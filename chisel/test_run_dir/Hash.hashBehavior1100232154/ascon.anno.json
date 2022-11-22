@@ -1,0 +1,43 @@
+[
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ascon|ascon>io_state",
+    "sources":[
+      "~ascon|ascon>io_mode",
+      "~ascon|ascon>io_nounce",
+      "~ascon|ascon>io_key",
+      "~ascon|ascon>io_message",
+      "~ascon|ascon>io_full"
+    ]
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ascon|ascon>io_cipher",
+    "sources":[
+      "~ascon|ascon>io_push",
+      "~ascon|ascon>io_message"
+    ]
+  },
+  {
+    "class":"logger.LogLevelAnnotation",
+    "globalLogLevel":{
+      
+    }
+  },
+  {
+    "class":"firrtl.options.TargetDirAnnotation",
+    "directory":"test_run_dir/Hash.hashBehavior1100232154"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/Hash.hashBehavior1100232154"
+  },
+  {
+    "class":"firrtl.options.OutputAnnotationFileAnnotation",
+    "file":"ascon"
+  }
+]

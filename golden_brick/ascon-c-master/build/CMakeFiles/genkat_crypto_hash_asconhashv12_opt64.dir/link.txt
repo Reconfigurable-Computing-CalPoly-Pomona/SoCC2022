@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/genkat_crypto_hash_asconhashv12_opt64.dir/tests/genkat_hash.c.o -o genkat_crypto_hash_asconhashv12_opt64  libcrypto_hash_asconhashv12_opt64.a 
