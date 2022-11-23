@@ -5,6 +5,7 @@ import chisel3.util._
 import scala.io.Source
 import ascon._
 import permutation._
+import layers._
 
 object ascon_Driver extends App {
   (new ChiselStage).emitVerilog(new ascon)

@@ -8,6 +8,7 @@ import chisel3.stage.ChiselStage
 import chisel3.util._
 import scala.io.Source
 import permutation._
+import layers._
 
 
 class ascon extends Module {
@@ -53,7 +54,7 @@ class ascon extends Module {
   val endReg =  RegInit(false.B)
   val doneReg = RegInit(false.B)
 
-  val permutation = Module(new permutation_new())
+  val permutation = Module(new permutation_two_wrapper())
 
   // io.state := permutation.io.s_in
 
