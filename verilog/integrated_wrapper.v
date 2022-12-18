@@ -57,13 +57,16 @@ module integrated_wrapper(
     wire io_empty;
     wire io_full;
     wire text_afull;
+    wire text_empty;
     wire text_aempty;
+    wire data_empty;
+    wire data_aempty;
     wire result_afull;
     
-    assign message = ((~mode[2] & mode[0]) & pull) ? data : 
-                     ((mode[2] | ~mode[0]) & pull) ? {data[63:0], 64'd0} :
-                     ((~mode[2] & mode[0]) & push) ? text : 
-                     ((~mode[2] & ~mode[0]) & push) ? {text[63:0], 64'd0} : 128'd0;
+    assign message = ((~mode[2] & mode[0]) & pull & ~data_empty) ? data : 
+                     ((mode[2] | ~mode[0]) & pull & ~data_empty) ? {data[63:0], 64'd0} :
+                     ((~mode[2] & mode[0]) & push & ~text_empty) ? text : 
+                     ((~mode[2] & ~mode[0]) & push & ~text_empty) ? {text[63:0], 64'd0} : 128'd0;
                      
     assign io_full = (mode[2]) ? result_afull : (mode[1]) ? text_empty : text_aempty;
     assign io_empty = data_aempty;
@@ -99,23 +102,23 @@ module integrated_wrapper(
 	);
     
     ascon ascon_core (
-    .clock(clock),
-    .reset(reset),
-    .io_key(key),
-    .io_nounce(nounce),
-    .io_tagin(tagin),
-    .io_message(message),
-    .io_start(start),
-    .io_empty(io_empty),
-    .io_full(io_full),
-    .io_mode(mode),
-    .io_push(push),
-    .io_pull(pull),
-    .io_cipher(cipher),
-    .io_tagout(tagout),
-    .io_done(done),
-    .io_warning(warning),
-    .io_valid(tag_valid)
+            .clock(clock),
+            .reset(reset),
+            .io_key(key),
+            .io_nounce(nounce),
+            .io_tagin(tagin),
+            .io_message(message),
+            .io_start(start),
+            .io_empty(io_empty),
+            .io_full(io_full),
+            .io_mode(mode),
+            .io_push(push),
+            .io_pull(pull),
+            .io_cipher(cipher),
+            .io_tagout(tagout),
+            .io_done(done),
+            .io_warning(warning),
+            .io_valid(tag_valid)
     );
     
     
